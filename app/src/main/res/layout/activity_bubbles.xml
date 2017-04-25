@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_bubbles"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.bimal.bubblegame.Bubbles">
+
+    <Button
+        android:id="@+id/bubble2"
+
+        android:text=""
+        android:textColor="#0077FF"
+        android:textSize="26sp"
+
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/bubbleshape"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="17dp"
+        android:layout_marginEnd="17dp"
+        android:layout_marginTop="34dp" />
+
+    <Button
+        android:id="@+id/bubble3"
+
+        android:text=""
+        android:textColor="#0077FF"
+        android:textSize="26sp"
+
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/bubbleshape"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:id="@+id/bubble5"
+
+        android:text=""
+        android:textColor="#0077FF"
+        android:textSize="26sp"
+
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/bubbleshape"
+        android:layout_below="@+id/bubble3"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="31dp" />
+
+    <Button
+        android:id="@+id/bubble4"
+
+        android:text=""
+        android:textColor="#0077FF"
+        android:textSize="26sp"
+
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/bubbleshape"
+        android:layout_alignBaseline="@+id/bubble5"
+        android:layout_alignBottom="@+id/bubble5"
+        android:layout_toLeftOf="@+id/bubble3"
+        android:layout_toStartOf="@+id/bubble3" />
+
+    <Button
+        android:id="@+id/bubble1"
+
+        android:text=""
+        android:textColor="#0077FF"
+        android:textSize="26sp"
+
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/bubbleshape"
+        android:layout_alignBaseline="@+id/bubble2"
+        android:layout_alignBottom="@+id/bubble2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/textView8"
+        android:layout_marginLeft="83dp"
+        android:layout_marginStart="83dp"
+        android:layout_alignLeft="@+id/bubble3"
+        android:layout_alignStart="@+id/bubble3" />
+
+
+</RelativeLayout>

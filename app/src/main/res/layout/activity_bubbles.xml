@@ -11,7 +11,7 @@
     tools:context="com.example.bimal.bubblegame.Bubbles">
 
     <Button
-        android:id="@+id/bubble2"
+        android:id="@+id/bubble_2"
 
         android:text=""
         android:textColor="#0077FF"
@@ -71,7 +71,7 @@
         android:layout_toStartOf="@+id/bubble3" />
 
     <Button
-        android:id="@+id/bubble1"
+        android:id="@+id/bubble_1"
 
         android:text=""
         android:textColor="#0077FF"
@@ -80,8 +80,8 @@
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:background="@drawable/bubbleshape"
-        android:layout_alignBaseline="@+id/bubble2"
-        android:layout_alignBottom="@+id/bubble2"
+        android:layout_alignBaseline="@+id/bubble_2"
+        android:layout_alignBottom="@+id/bubble_2"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 

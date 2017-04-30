@@ -30,7 +30,9 @@
         <activity
             android:name=".Lose"
             android:label="@string/title_activity_lose"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".Level3Activity" />
+        <activity android:name=".Level2Activity" />
     </application>
 
 </manifest>

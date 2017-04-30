@@ -27,7 +27,8 @@ public class MainActivity extends AppCompatActivity {
         level2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getApplicationContext(),"Level 2 Under Construction",Toast.LENGTH_SHORT).show();
+                Intent i = new Intent(getApplicationContext(),Level2Activity.class);
+                startActivity(i);
             }
         });
 
@@ -35,7 +36,8 @@ public class MainActivity extends AppCompatActivity {
         level3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getApplicationContext(),"Level 3 Under Construction",Toast.LENGTH_SHORT).show();
+                Intent i = new Intent(getApplicationContext(),Level3Activity.class);
+                startActivity(i);
             }
         });
         level4 = (Button) findViewById(R.id.button4);

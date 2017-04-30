@@ -7,7 +7,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Chronometer;
 import android.widget.TextView;
 
 public class Bubbles extends AppCompatActivity {
@@ -21,8 +20,8 @@ public class Bubbles extends AppCompatActivity {
         final Intent i = new Intent(getApplicationContext(), Win.class);
         final TextView mTextField = (TextView) findViewById(R.id.textView8);
 
-        bubble1 = (Button) findViewById(R.id.bubble1);
-        bubble2 = (Button) findViewById(R.id.bubble2);
+        bubble1 = (Button) findViewById(R.id.bubble_1);
+        bubble2 = (Button) findViewById(R.id.bubble_2);
         bubble3 = (Button) findViewById(R.id.bubble3);
         bubble4 = (Button) findViewById(R.id.bubble4);
         bubble5 = (Button) findViewById(R.id.bubble5);
@@ -46,7 +45,7 @@ public class Bubbles extends AppCompatActivity {
                     startActivity(i2);
                 }
                 counter = 0;
-                // close this activity
+//                 close this activity
                 finish();
             }
         }, SPLASH_TIME_OUT);

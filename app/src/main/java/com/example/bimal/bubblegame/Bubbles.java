@@ -8,10 +8,20 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class Bubbles extends AppCompatActivity {
     public static int SPLASH_TIME_OUT = 5000;
     public static int counter = 0;
+    private volatile boolean cancelled = false;
+
+    @Override
+    public void onBackPressed() {
+//        super.onBackPressed();
+        cancelled = true;
+        this.finish();
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,6 +35,7 @@ public class Bubbles extends AppCompatActivity {
         bubble3 = (Button) findViewById(R.id.bubble3);
         bubble4 = (Button) findViewById(R.id.bubble4);
         bubble5 = (Button) findViewById(R.id.bubble5);
+
 
         // Count-Down (show timer)
         new CountDownTimer(SPLASH_TIME_OUT, 1000) {
@@ -40,13 +51,17 @@ public class Bubbles extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                if(counter != 5) {
-                    Intent i2 = new Intent(getApplicationContext(), Lose.class);
-                    startActivity(i2);
-                }
-                counter = 0;
-//                 close this activity
+             if(cancelled){
                 finish();
+             }else {
+                 if (counter != 5) {
+                     Intent i2 = new Intent(getApplicationContext(), Lose.class);
+                     startActivity(i2);
+                 }
+                 counter = 0;
+//                 close this activity
+                 finish();
+             }
             }
         }, SPLASH_TIME_OUT);
 

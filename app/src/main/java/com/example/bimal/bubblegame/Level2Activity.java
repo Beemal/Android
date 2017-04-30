@@ -14,6 +14,14 @@ import java.util.ArrayList;
 public class Level2Activity extends AppCompatActivity {
     public static  int counter = 0;
     public static int SPLASH_TIME_OUT = 5000;
+    private volatile boolean cancelled = false;
+
+    @Override
+    public void onBackPressed() {
+//        super.onBackPressed();
+        cancelled = true;
+        this.finish();
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,13 +44,17 @@ public class Level2Activity extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                if(counter != 18) {
-                    Intent i2 = new Intent(getApplicationContext(), Lose.class);
-                    startActivity(i2);
+                if(cancelled){
+                    finish();
+                }else {
+                    if (counter != 18) {
+                        Intent i2 = new Intent(getApplicationContext(), Lose.class);
+                        startActivity(i2);
+                    }
+                    counter = 0;
+                    // close this activity
+                    finish();
                 }
-                counter = 0;
-                // close this activity
-                finish();
             }
         }, SPLASH_TIME_OUT);
 
